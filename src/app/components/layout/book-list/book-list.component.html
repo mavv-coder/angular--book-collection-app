@@ -7,20 +7,20 @@
       <span *ngIf="!book.isRead" class="material-icons not-read-icon">
         panorama_fish_eye
       </span>
-      <span class="text-item">{{ book.author }}</span>
       <span class="text-item">{{ book.title }}</span>
+      <span class="text-item">{{ book.author }}</span>
       <span class="text-item">{{ book.isbn }}</span>
       <span class="text-item">{{ book.pages }} pp</span>
     </div>
     <div class="btn-container">
-      <button class="detail-btn">
+      <button class="btn detail-btn">
         <span class="material-icons details-icon"> exit_to_app </span>
       </button>
-      <button class="detail-btn">
-        <span class="material-icons details-icon"> exit_to_app </span>
+      <button class="btn edit-btn">
+        <span class="material-icons edit-icon"> edit </span>
       </button>
-      <button class="detail-btn">
-        <span class="material-icons details-icon"> exit_to_app </span>
+      <button class="btn delete-btn">
+        <span class="material-icons delete-icon"> highlight_off </span>
       </button>
     </div>
   </li>

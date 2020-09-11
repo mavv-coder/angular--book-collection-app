@@ -30,7 +30,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-right: 1rem;
+      margin-right: 2rem;
       .text-item {
         padding: 0 1rem;
         border-right: 1px solid #ccc;
@@ -40,22 +40,56 @@
         }
       }
     }
+    .btn-container {
+      padding-left: 2rem;
+      border-left: 1px solid #ccc;
 
-    .detail-btn {
-      position: relative;
-      height: 4rem;
-      width: 4rem;
-      margin-left: 1rem;
-      background-color: #ccc;
-      color: white;
-      outline: none;
-      border-radius: 50%;
-      border: none;
+      .btn {
+        position: relative;
+        height: 4rem;
+        width: 4rem;
+        margin-left: 1rem;
+        color: white;
+        outline: none;
+        border-radius: 50%;
+        border: none;
 
-      .details-icon {
-        position: absolute;
-        top: 0.8rem;
-        right: 0.7rem;
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+
+        .details-icon {
+          position: absolute;
+          top: 0.8rem;
+          right: 0.7rem;
+        }
+
+        .edit-icon {
+          position: absolute;
+          top: 0.8rem;
+          right: 0.7rem;
+        }
+
+        .delete-icon {
+          position: absolute;
+          top: 0.8rem;
+          right: 0.8rem;
+        }
+      }
+
+      .detail-btn {
+        background-color: #ccc;
+      }
+      .edit-btn {
+        background-color: rgb(233, 166, 49);
+      }
+      .delete-btn {
+        background-color: rgb(233, 67, 49);
       }
     }
   }
