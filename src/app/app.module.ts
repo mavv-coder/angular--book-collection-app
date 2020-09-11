@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
@@ -24,7 +26,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     LoginComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FlashMessagesModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })
