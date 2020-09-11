@@ -20,7 +20,7 @@
           <span class="text-item">{{ book.pages }} pp.</span>
         </div>
         <div class="btn-container">
-          <button class="btn edit-btn">
+          <button class="btn edit-btn" routerLink="book/edit/{{ book.id }}">
             <span class="material-icons edit-icon"> edit </span>
           </button>
           <button class="btn delete-btn" (click)="onDelete(book)">
