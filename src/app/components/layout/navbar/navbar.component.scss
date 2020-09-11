@@ -1,0 +1,33 @@
+$background-color: rgb(87, 87, 232);
+$light-color: white;
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $background-color;
+
+  .app-title {
+    color: $light-color;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .link-list {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin-right: 1rem;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $light-color;
+    }
+  }
+}
