@@ -1,1 +1,27 @@
-<p>book-list works!</p>
+<ul class="list-container">
+  <li *ngFor="let book of books" class="list-item-container">
+    <div class="text-container">
+      <span *ngIf="book.isRead" class="material-icons read-icon">
+        check_circle
+      </span>
+      <span *ngIf="!book.isRead" class="material-icons not-read-icon">
+        panorama_fish_eye
+      </span>
+      <span class="text-item">{{ book.author }}</span>
+      <span class="text-item">{{ book.title }}</span>
+      <span class="text-item">{{ book.isbn }}</span>
+      <span class="text-item">{{ book.pages }} pp</span>
+    </div>
+    <div class="btn-container">
+      <button class="detail-btn">
+        <span class="material-icons details-icon"> exit_to_app </span>
+      </button>
+      <button class="detail-btn">
+        <span class="material-icons details-icon"> exit_to_app </span>
+      </button>
+      <button class="detail-btn">
+        <span class="material-icons details-icon"> exit_to_app </span>
+      </button>
+    </div>
+  </li>
+</ul>
