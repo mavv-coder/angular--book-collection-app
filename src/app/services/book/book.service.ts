@@ -63,8 +63,8 @@ export class BookService {
     this.bookDoc.update(book);
   }
 
-  deleteBook(book: Book): void {
-    this.bookDoc = this.angularFire.doc(`books/${book.id}`);
+  deleteBook(id: string): void {
+    this.bookDoc = this.angularFire.doc(`books/${id}`);
     this.bookDoc.delete();
   }
 }

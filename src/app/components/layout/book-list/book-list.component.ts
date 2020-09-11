@@ -37,4 +37,9 @@ export class BookListComponent implements OnInit {
       return (total += book.pages);
     }, 0);
   }
+
+  onDelete(book: Book): void {
+    if (confirm(`You are going to delete ${book.title}. Are you sure?`))
+      this.bookService.deleteBook(book.id);
+  }
 }
