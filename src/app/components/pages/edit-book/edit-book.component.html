@@ -1,1 +1,93 @@
-<p>edit-book works!</p>
+<main class="card">
+  <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+    <div class="form-field">
+      <label for="author">Author</label>
+      <input
+        type="text"
+        name="author"
+        #bookAuthor="ngModel"
+        [(ngModel)]="book.author"
+        minlength="2"
+        required
+        [ngClass]="{
+          'is-invalid': bookAuthor.errors && bookAuthor.touched
+        }"
+      />
+      <div *ngIf="bookAuthor.errors?.required && bookAuthor.touched">
+        Author is required
+      </div>
+      <div *ngIf="bookAuthor.errors?.minlength && bookAuthor.touched">
+        Author must have 2 characters at least
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        #bookTitle="ngModel"
+        [(ngModel)]="book.title"
+        minlength="2"
+        required
+        [ngClass]="{
+          'is-invalid': bookTitle.errors && bookTitle.touched
+        }"
+      />
+      <div *ngIf="bookTitle.errors?.required && bookTitle.touched">
+        Title is required
+      </div>
+      <div *ngIf="bookTitle.errors?.minlength && bookTitle.touched">
+        Title must have 2 characters at least
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="isbn">ISBN</label>
+      <input
+        type="text"
+        name="isbn"
+        #bookIsbn="ngModel"
+        [(ngModel)]="book.isbn"
+        pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|'(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*')@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+        required
+        [ngClass]="{
+          'is-invalid': bookIsbn.errors && bookIsbn.touched
+        }"
+      />
+      <div *ngIf="bookIsbn.errors?.required && bookIsbn.touched">
+        ISBN is required
+      </div>
+      <div *ngIf="bookIsbn.errors?.pattern && bookIsbn.touched">
+        Introduce a correct ISBN
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="pages">Pages</label>
+      <input
+        type="number"
+        name="pages"
+        #bookPages="ngModel"
+        [(ngModel)]="book.pages"
+        required
+        [ngClass]="{
+          'is-invalid': bookPages.errors && bookPages.touched
+        }"
+      />
+      <div *ngIf="bookPages.errors?.required && bookPages.touched">
+        Pages field is required
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="isRead">Already read?</label>
+      <input
+        type="checkbox"
+        name="isRead"
+        #bookIsRead="ngModel"
+        [(ngModel)]="book.isRead"
+      />
+    </div>
+
+    <input type="submit" value="submit" />
+  </form>
+</main>

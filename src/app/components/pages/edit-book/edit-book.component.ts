@@ -21,9 +21,19 @@ export class EditBookComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.book = {
+      title: '',
+      author: '',
+      isbn: '',
+      pages: 0,
+      id: '',
+      isRead: false,
+    };
     this.id = this.activatedRoute.snapshot.params['id'];
     this.bookService.getBook(this.id).subscribe((data) => {
       this.book = data;
     });
   }
+
+  onSubmit({ form, valid }: { form: Book; valid: boolean }): void {}
 }
