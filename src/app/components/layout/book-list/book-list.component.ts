@@ -43,11 +43,12 @@ export class BookListComponent implements OnInit {
   }
 
   onDelete(book: Book): void {
-    if (confirm(`You are going to delete ${book.title}. Are you sure?`))
+    if (confirm(`You are going to delete ${book.title}. Are you sure?`)) {
       this.bookService.deleteBook(book.id);
-    this.flashMessage.show('The book has been removed successfully!', {
-      cssClass: 'alert-success',
-      timeout: 3500,
-    });
+      this.flashMessage.show('The book has been removed successfully!', {
+        cssClass: 'alert-success',
+        timeout: 3500,
+      });
+    }
   }
 }

@@ -35,5 +35,7 @@ export class EditBookComponent implements OnInit {
     });
   }
 
-  onSubmit({ form, valid }: { form: Book; valid: boolean }): void {}
+  onSubmit({ form, valid }: { form: Book; valid: boolean }): void {
+    console.log(valid);
+  }
 }

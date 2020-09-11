@@ -1,7 +1,7 @@
-<main class="card">
+<main class="card content">
   <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
     <div class="form-field">
-      <label for="author">Author</label>
+      <label for="author">Author:</label>
       <input
         type="text"
         name="author"
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="form-field">
-      <label for="title">Title</label>
+      <label for="title">Title:</label>
       <input
         type="text"
         name="title"
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="form-field">
-      <label for="isbn">ISBN</label>
+      <label for="isbn">ISBN:</label>
       <input
         type="text"
         name="isbn"
@@ -62,7 +62,7 @@
     </div>
 
     <div class="form-field">
-      <label for="pages">Pages</label>
+      <label for="pages">Pages:</label>
       <input
         type="number"
         name="pages"
@@ -87,7 +87,6 @@
         [(ngModel)]="book.isRead"
       />
     </div>
-
-    <input type="submit" value="submit" />
+    <input class="submit-btn" type="submit" value="Update" />
   </form>
 </main>
