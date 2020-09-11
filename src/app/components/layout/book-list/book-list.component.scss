@@ -11,15 +11,16 @@
 
     p {
       font-size: 1.4rem;
-      background-color: rgba(219, 80, 65, 0.7);
+      border: 2px solid rgba(219, 80, 65, 0.7);
       padding: 0.8rem 2rem;
       border-radius: 1rem;
-      color: white;
+      color: rgba(219, 80, 65, 0.7);
     }
 
     p:first-of-type {
       margin-bottom: 10px;
-      background-color: rgba(58, 173, 110, 0.7);
+      border: 2px solid rgba(58, 173, 110, 0.8);
+      color: rgba(58, 173, 110, 0.8);
     }
 
     .divider {

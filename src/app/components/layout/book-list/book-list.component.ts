@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlashMessagesService } from 'angular2-flash-messages';
 import { BookService } from '../../../services/book/book.service';
 import { Book } from '../../../models';
 
@@ -14,7 +15,10 @@ export class BookListComponent implements OnInit {
   showReadPages: boolean = true;
   showPagesToRead: boolean = true;
 
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    private flashMessage: FlashMessagesService
+  ) {}
 
   ngOnInit(): void {
     this.bookService.getBooks().subscribe((data) => {
@@ -41,5 +45,9 @@ export class BookListComponent implements OnInit {
   onDelete(book: Book): void {
     if (confirm(`You are going to delete ${book.title}. Are you sure?`))
       this.bookService.deleteBook(book.id);
+    this.flashMessage.show('The book has been removed successfully!', {
+      cssClass: 'alert-success',
+      timeout: 3500,
+    });
   }
 }
