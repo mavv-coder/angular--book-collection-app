@@ -1,1 +1,13 @@
-<app-book-list></app-book-list>
+<div class="content">
+  <div class="header-details">
+    <a class="add-new-btn" routerLink="/book/add"
+      >Add new<span class="material-icons add-icon"> add </span></a
+    >
+    <div class="pages-container">
+      <p>Read pages: {{ readPages }}</p>
+      <p>Pages to read: {{ pagesToRead }}</p>
+      <hr class="divider" />
+    </div>
+  </div>
+  <app-book-list></app-book-list>
+</div>
