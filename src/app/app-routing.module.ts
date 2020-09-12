@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { baseRoutes } from './app-routes.config';
 
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { LoginComponent } from './components/pages/login/login.component';
@@ -8,10 +9,10 @@ import { EditBookComponent } from './components/pages/edit-book/edit-book.compon
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'book/edit/:id', component: EditBookComponent },
-  { path: 'book/add', component: AddBookComponent },
+  { path: baseRoutes.dashboard, component: DashboardComponent },
+  { path: baseRoutes.login, component: LoginComponent },
+  { path: baseRoutes.bookEdit, component: EditBookComponent },
+  { path: baseRoutes.bookAdd, component: AddBookComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
