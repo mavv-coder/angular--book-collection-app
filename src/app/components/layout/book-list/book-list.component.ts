@@ -10,6 +10,7 @@ import { Book } from '../../../models';
 })
 export class BookListComponent implements OnInit {
   books: Book[];
+  showSpinner: boolean;
 
   constructor(
     private bookService: BookService,
@@ -17,8 +18,10 @@ export class BookListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.showSpinner = true;
     this.bookService.getBooks().subscribe((data) => {
       this.books = data;
+      this.showSpinner = false;
     });
   }
 

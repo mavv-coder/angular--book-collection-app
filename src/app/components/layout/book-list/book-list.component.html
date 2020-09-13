@@ -23,6 +23,7 @@
       </div>
     </li>
   </ul>
+  <app-spinner *ngIf="showSpinner"></app-spinner>
   <div class="no-book-msg" *ngIf="books?.length === 0">
     There are no books in your collection. Add a new one!
   </div>

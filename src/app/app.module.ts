@@ -22,6 +22,7 @@ import { EditBookComponent } from './components/pages/edit-book/edit-book.compon
 import { LoginComponent } from './components/pages/login/login.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { BackButtonComponent } from './components/layout/back-button/back-button.component';
+import { SpinnerComponent } from './components/layout/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BackButtonComponent } from './components/layout/back-button/back-button
     LoginComponent,
     NotFoundComponent,
     BackButtonComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
