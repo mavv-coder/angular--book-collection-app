@@ -1,5 +1,5 @@
 <main class="card">
-  <ul class="list-container">
+  <ul *ngIf="books?.length > 0" class="list-container">
     <li *ngFor="let book of books" class="list-item-container">
       <div class="text-container">
         <span *ngIf="book.isRead" class="material-icons read-icon">
@@ -23,4 +23,7 @@
       </div>
     </li>
   </ul>
+  <div class="no-book-msg" *ngIf="books?.length === 0">
+    There are no books in your collection. Add a new one!
+  </div>
 </main>

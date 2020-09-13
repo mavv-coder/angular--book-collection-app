@@ -12,6 +12,7 @@ import { Book } from 'src/app/models';
 })
 export class AddBookComponent implements OnInit {
   book: Book;
+  flashWorking: boolean;
 
   constructor(
     private bookService: BookService,
@@ -28,24 +29,39 @@ export class AddBookComponent implements OnInit {
       isRead: false,
       isbn: '',
     };
+    this.flashWorking = false;
+  }
+
+  setFlashWorking() {
+    this.flashWorking = true;
+    setTimeout(() => {
+      this.flashWorking = false;
+    }, 2000);
+  }
+
+  showFlashMessage(msg: string, cssClass: string): void {
+    this.flashMessage.show(msg, {
+      cssClass: cssClass,
+      timeout: 2000,
+    });
   }
 
   onSubmit({ value, valid }: { value: Book; valid: boolean }) {
-    if (!valid) {
-      this.flashMessage.show('Please fill out the form correctly', {
-        cssClass: 'error-msg',
-        timeout: 4000,
-      });
-    } else {
-      // Show success
-      this.flashMessage.show('New client added', {
-        cssClass: 'success-msg',
-        timeout: 4000,
-      });
-
+    if (valid) {
       this.bookService.addBook(value);
-
+      if (!this.flashWorking) {
+        this.showFlashMessage(
+          'The book has been updated successfully!',
+          'alert-success'
+        );
+        this.setFlashWorking();
+      }
       this.router.navigate(['/']);
+    } else {
+      if (!this.flashWorking) {
+        this.showFlashMessage('Check the form!', 'alert-error');
+        this.setFlashWorking();
+      }
     }
   }
 }
