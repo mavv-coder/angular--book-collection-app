@@ -1,0 +1,26 @@
+.header-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .back-btn {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(68, 130, 223);
+    border-radius: 1rem;
+    padding: 1rem 2rem 1rem 4.5rem;
+    transition: all 0.1s;
+    &:hover {
+      background-color: rgba(68, 130, 223, 0.8);
+      cursor: pointer;
+    }
+
+    .add-icon {
+      position: absolute;
+      top: 0.8rem;
+      left: 1.2rem;
+    }
+  }
+}
