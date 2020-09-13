@@ -9,18 +9,20 @@ import { Book } from '../../../models';
 })
 export class DashboardComponent implements OnInit {
   books: Book[];
-  readPages: number;
-  pagesToRead: number;
+  readPages: number = 0;
+  pagesToRead: number = 0;
   showReadPages: boolean = true;
   showPagesToRead: boolean = true;
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
-    this.bookService.getBooks().subscribe((data) => {
-      this.books = data;
-      this.getPagesToRead();
-      this.getReadPages();
-    });
+    setTimeout(() => {
+      this.bookService.getBooks().subscribe((data) => {
+        this.books = data;
+        this.getPagesToRead();
+        this.getReadPages();
+      });
+    }, 2000);
   }
 
   getPagesToRead(): void {

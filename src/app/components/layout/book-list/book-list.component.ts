@@ -20,10 +20,12 @@ export class BookListComponent implements OnInit {
 
   ngOnInit(): void {
     this.showSpinner = true;
-    this.bookService.getBooks().subscribe((data) => {
-      this.books = data;
-      this.showSpinner = false;
-    });
+    setTimeout(() => {
+      this.bookService.getBooks().subscribe((data) => {
+        this.books = data;
+        this.showSpinner = false;
+      });
+    }, 2000);
   }
 
   onDelete(book: Book): void {

@@ -45,13 +45,11 @@ export class EditBookComponent implements OnInit {
           'The book has been updated successfully!',
           'alert-success'
         );
-        this.snackbarService.setFlashWorking();
       }
       this.router.navigate([baseRoutes.dashboard]);
     } else {
       if (!this.snackbarService.getflashWorking()) {
         this.snackbarService.showFlashMessage('Check the form!', 'alert-error');
-        this.snackbarService.setFlashWorking();
       }
     }
   }

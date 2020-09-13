@@ -17,6 +17,7 @@ export class SnackbarService {
   }
 
   showFlashMessage(msg: string, cssClass: string): void {
+    this.setFlashWorking();
     this.flashMessage.show(msg, {
       cssClass: cssClass,
       timeout: 2000,
