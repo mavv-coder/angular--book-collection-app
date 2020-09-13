@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SnackbarService } from '../../../services/snackbar/snackbar.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { BookService } from '../../../services/book/book.service';
 import { Book } from '../../../models';
@@ -14,7 +15,7 @@ export class BookListComponent implements OnInit {
 
   constructor(
     private bookService: BookService,
-    private flashMessage: FlashMessagesService
+    private snackbarService: SnackbarService
   ) {}
 
   ngOnInit(): void {
@@ -28,10 +29,12 @@ export class BookListComponent implements OnInit {
   onDelete(book: Book): void {
     if (confirm(`You are going to delete ${book.title}. Are you sure?`)) {
       this.bookService.deleteBook(book.id);
-      this.flashMessage.show('The book has been removed successfully!', {
-        cssClass: 'alert-success',
-        timeout: 3500,
-      });
+      if (!this.snackbarService.getflashWorking()) {
+        this.snackbarService.showFlashMessage(
+          'The book has been removed successfully!',
+          'alert-success'
+        );
+      }
     }
   }
 }
