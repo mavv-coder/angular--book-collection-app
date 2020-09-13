@@ -1,5 +1,5 @@
 .card {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   background-color: #eee;
   border-radius: 1rem;
 }
@@ -16,10 +16,6 @@
     border-bottom: 0.1rem solid #ccc;
     &:last-of-type {
       border-bottom: none;
-      padding: 1.5rem 0 0 0;
-    }
-    &:first-of-type {
-      padding: 0 0 1.5rem 0;
     }
 
     .read-icon {

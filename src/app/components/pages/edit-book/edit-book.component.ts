@@ -13,6 +13,7 @@ import { Book } from 'src/app/models';
 export class EditBookComponent implements OnInit {
   id: string;
   book: Book;
+  flashWorking: boolean;
 
   constructor(
     private bookService: BookService,
@@ -22,6 +23,7 @@ export class EditBookComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.flashWorking = false;
     this.book = {
       title: '',
       author: '',
@@ -36,20 +38,38 @@ export class EditBookComponent implements OnInit {
     });
   }
 
+  setFlashWorking() {
+    this.flashWorking = true;
+    setTimeout(() => {
+      this.flashWorking = false;
+    }, 2000);
+  }
+
+  showFlashMessage(msg: string, cssClass: string): void {
+    this.flashMessage.show(msg, {
+      cssClass: cssClass,
+      timeout: 2000,
+    });
+  }
+
   onSubmit({ value, valid }: { value: Book; valid: boolean }): void {
     if (valid) {
       value.id = this.id;
       this.bookService.updateBook(value);
-      this.flashMessage.show('The book has been updated successfully!', {
-        cssClass: 'alert-success',
-        timeout: 3500,
-      });
+      if (!this.flashWorking) {
+        this.showFlashMessage(
+          'The book has been updated successfully!',
+          'alert-success'
+        );
+        this.setFlashWorking();
+      }
+
       this.router.navigate([baseRoutes.dashboard]);
     } else {
-      this.flashMessage.show('Check the form!', {
-        cssClass: 'alert-error',
-        timeout: 3500,
-      });
+      if (!this.flashWorking) {
+        this.showFlashMessage('Check the form!', 'alert-error');
+        this.setFlashWorking();
+      }
     }
   }
 }

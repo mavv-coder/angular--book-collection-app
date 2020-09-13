@@ -1,7 +1,7 @@
 <main class="card content">
   <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
     <div class="form-field">
-      <label for="author">Author:</label>
+      <label for="author">Author</label>
       <input
         [className]="
           bookAuthor.errors && bookAuthor.touched
@@ -19,17 +19,17 @@
         class="error-msg"
         *ngIf="bookAuthor.errors?.required && bookAuthor.touched"
       >
-        Author is required
+        Author field is required
       </div>
       <div
         class="error-msg"
         *ngIf="bookAuthor.errors?.minlength && bookAuthor.touched"
       >
-        Author must have 2 characters at least
+        Author field must have 2 characters at least
       </div>
     </div>
     <div class="form-field">
-      <label for="title">Title:</label>
+      <label for="title">Title</label>
       <input
         [className]="
           bookTitle.errors && bookTitle.touched ? 'invalid-input' : 'text-input'
@@ -45,17 +45,17 @@
         class="error-msg"
         *ngIf="bookTitle.errors?.required && bookTitle.touched"
       >
-        Title is required
+        Title field is required
       </div>
       <div
         class="error-msg"
         *ngIf="bookTitle.errors?.minlength && bookTitle.touched"
       >
-        Title must have 2 characters at least
+        Title field must have 2 characters at least
       </div>
     </div>
     <div class="form-field">
-      <label for="isbn">ISBN:</label>
+      <label for="isbn">ISBN</label>
       <input
         [className]="
           bookIsbn.errors && bookIsbn.touched ? 'invalid-input' : 'text-input'
@@ -71,7 +71,7 @@
         class="error-msg"
         *ngIf="bookIsbn.errors?.required && bookIsbn.touched"
       >
-        ISBN is required
+        ISBN field is required
       </div>
       <div
         class="error-msg"
@@ -82,7 +82,7 @@
     </div>
 
     <div class="form-field">
-      <label for="pages">Pages:</label>
+      <label for="pages">Pages</label>
       <input
         [className]="
           bookPages.errors && bookPages.touched ? 'invalid-input' : 'text-input'

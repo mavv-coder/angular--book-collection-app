@@ -3,28 +3,46 @@
   margin: 4rem auto 0 auto;
 
   .form-field {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
     &:first-of-type {
-      margin: 0 0 1.5rem 0;
+      margin: 0 0 2rem 0;
     }
 
     label {
-      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-size: 1.6rem;
       margin-bottom: 0.5rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: rgb(74, 109, 131);
     }
 
     .text-input {
+      font-size: 1.6rem;
       width: 50rem;
       padding: 0.6rem;
-      border: 1px solid #999;
+      border: none;
+      border-bottom: 2px solid rgb(74, 109, 131);
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid rgb(74, 109, 131);
+      }
     }
 
     .invalid-input {
       width: 50rem;
+      font-size: 1.6rem;
       padding: 0.6rem;
-      border: 1px solid rgb(219, 80, 65);
+      border: none;
+      border-bottom: 2px solid rgb(219, 80, 65);
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid rgb(219, 80, 65);
+      }
     }
   }
 
@@ -34,12 +52,18 @@
     align-items: center;
 
     label {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: rgb(74, 109, 131);
       margin-right: 2rem;
     }
   }
 
   .submit-btn {
     display: inline-block;
+    font-size: 1.6rem;
     margin-top: 2rem;
     width: 30%;
     padding: 0.8rem 1.2rem;
