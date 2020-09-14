@@ -1,6 +1,13 @@
-$font-default: "Roboto", sans-serif;
-$color-dark: rgb(31, 31, 31);
+// Variables
+$color-background: #faf9f6;
+$color-primary: rgb(68, 130, 223);
+$color-secondary: #a35d6a;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-succes: #91d18b;
+$color-dark: #1a1c20;
 $color-light: #fff;
+$color-medium-grey: #999;
 
 *,
 *::before,
@@ -19,7 +26,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: $color-light;
+  background-color: $color-background;
   color: $color-dark;
 }
 
@@ -33,7 +40,7 @@ a {
 
 .card {
   padding: 2rem;
-  background-color: #eee;
+  background-color: $color-light;
   border-radius: 1rem;
 }
 

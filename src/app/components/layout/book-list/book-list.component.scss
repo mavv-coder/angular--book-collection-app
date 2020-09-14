@@ -1,6 +1,16 @@
+// Variables
+$color-background: #faf9f6;
+$color-primary: #065c6f;
+$color-secondary: #a35d6a;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-succes: #91d18b;
+$color-dark: #1a1c20;
+$color-light: #fff;
+$color-medium-grey: #999;
+
 .card {
   padding: 0.5rem 2rem;
-  background-color: #eee;
   border-radius: 1rem;
   min-width: 30rem;
 }
@@ -80,10 +90,10 @@
       }
 
       .edit-btn {
-        background-color: rgb(233, 166, 49);
+        background-color: #eebb4d;
       }
       .delete-btn {
-        background-color: rgb(219, 80, 65);
+        background-color: #ed6663;
       }
     }
   }
