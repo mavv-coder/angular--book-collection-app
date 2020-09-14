@@ -1,9 +1,10 @@
 <nav class="navbar">
   <p class="app-title">Book Collection</p>
   <ul class="link-list">
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Register</a></li>
-    <li><a routerLink="/">Dashboard</a></li>
-    <li><a href="#" (click)="onLogoutClick()">Logout</a></li>
+    <li *ngIf="isLogged" class="username">Hello, {{ userEmail }}</li>
+    <li *ngIf="!isLogged"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!isLogged"><a routerLink="/register">Register</a></li>
+    <li *ngIf="isLogged"><a routerLink="/">Dashboard</a></li>
+    <li *ngIf="isLogged"><a href="#" (click)="onLogoutClick()">Logout</a></li>
   </ul>
 </nav>
