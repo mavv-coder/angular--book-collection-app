@@ -57,6 +57,7 @@ $color-medium-grey: #999;
       transition: all 0.1s ease;
       border-bottom: 2px solid $color-light;
       &:not([class="username"]):hover {
+        cursor: pointer;
         border-bottom: 2px solid $color-primary;
       }
       &:last-of-type {

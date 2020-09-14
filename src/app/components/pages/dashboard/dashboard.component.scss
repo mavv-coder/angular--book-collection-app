@@ -1,3 +1,14 @@
+// Variables
+$color-background: #f7f2e7;
+$color-primary: rgb(68, 130, 223);
+$color-secondary: #a35d6a;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-success: #5cb163;
+$color-dark: #1a1c20;
+$color-light: #fff;
+$color-medium-grey: #999;
+
 .content {
   min-width: 30rem;
   width: max-content;
@@ -18,7 +29,7 @@
       text-decoration: none;
       margin-bottom: 2rem;
       color: white;
-      background-color: rgb(58, 173, 110);
+      background-color: $color-success;
       border-radius: 1rem;
       padding: 1rem 3.8rem 1rem 2rem;
       transition: all 0.1s;
