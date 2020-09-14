@@ -10,6 +10,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { AddBookComponent } from './components/pages/add-book/add-book.component';
 import { EditBookComponent } from './components/pages/edit-book/edit-book.component';
+import { SettingsComponent } from './components/pages/settings/settings.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 const routes: Routes = [
@@ -19,6 +20,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: baseRoutes.login, component: LoginComponent },
+  {
+    path: baseRoutes.settings,
+    component: SettingsComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: baseRoutes.register,
     component: RegisterComponent,

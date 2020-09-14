@@ -25,7 +25,7 @@ export class BookListComponent implements OnInit {
         this.books = data;
         this.showSpinner = false;
       });
-    }, 2000);
+    }, 1000);
   }
 
   onDelete(book: Book): void {

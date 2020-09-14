@@ -24,6 +24,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { BackButtonComponent } from './components/layout/back-button/back-button.component';
 import { SpinnerComponent } from './components/layout/spinner/spinner.component';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { SettingsComponent } from './components/pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RegisterComponent } from './components/pages/register/register.componen
     BackButtonComponent,
     SpinnerComponent,
     RegisterComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

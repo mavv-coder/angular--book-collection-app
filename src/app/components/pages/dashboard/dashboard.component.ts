@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
         this.getPagesToRead();
         this.getReadPages();
       });
-    }, 2000);
+    }, 1000);
   }
 
   getPagesToRead(): void {
