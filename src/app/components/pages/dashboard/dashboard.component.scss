@@ -1,13 +1,12 @@
-// Variables
-$color-background: #f7f2e7;
-$color-primary: rgb(68, 130, 223);
-$color-secondary: #a35d6a;
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
 $color-warn: #eebb4d;
 $color-danger: #ed6663;
-$color-success: #5cb163;
+$color-succes: #3aad6e;
 $color-dark: #1a1c20;
 $color-light: #fff;
-$color-medium-grey: #999;
+$color-grey: #999;
 
 .content {
   min-width: 30rem;
@@ -29,12 +28,12 @@ $color-medium-grey: #999;
       text-decoration: none;
       margin-bottom: 2rem;
       color: white;
-      background-color: $color-success;
+      background-color: $color-succes;
       border-radius: 1rem;
       padding: 1rem 3.8rem 1rem 2rem;
       transition: all 0.1s;
       &:hover {
-        background-color: rgba(58, 173, 110, 0.8);
+        opacity: 0.7;
       }
 
       .add-icon {
@@ -51,22 +50,21 @@ $color-medium-grey: #999;
     p {
       font-size: 1.4rem;
       user-select: none;
-      border: 2px solid rgba(219, 80, 65, 0.7);
       padding: 0.8rem 2rem;
       border-radius: 1rem;
-      color: rgba(219, 80, 65, 0.7);
-    }
+      color: $color-danger;
+      background-color: white;
+      &:first-of-type {
+        margin-bottom: 10px;
 
-    p:first-of-type {
-      margin-bottom: 10px;
-      border: 2px solid rgba(58, 173, 110, 0.8);
-      color: rgba(58, 173, 110, 0.8);
+        color: $color-succes;
+      }
     }
 
     .divider {
       width: 50%;
       margin: 2rem 0 0rem auto;
-      border: 1px solid #eee;
+      border: 1px solid #ccc;
     }
   }
 }

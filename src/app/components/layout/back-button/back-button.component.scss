@@ -1,3 +1,13 @@
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-succes: #3aad6e;
+$color-dark: #1a1c20;
+$color-light: #fff;
+$color-grey: #999;
+
 .header-details {
   width: 100%;
   display: flex;
@@ -6,14 +16,14 @@
 
   .back-btn {
     position: relative;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(68, 130, 223);
-    border-radius: 1rem;
     padding: 1rem 2rem 1rem 4.5rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: $color-light;
+    background-color: $color-primary;
     transition: all 0.1s;
     &:hover {
-      background-color: rgba(68, 130, 223, 0.8);
+      opacity: 0.7;
       cursor: pointer;
     }
 

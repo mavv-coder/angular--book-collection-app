@@ -1,13 +1,12 @@
-// Variables
-$color-background: #f7f2e7;
-$color-primary: rgb(68, 130, 223);
-$color-secondary: #a35d6a;
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
 $color-warn: #eebb4d;
 $color-danger: #ed6663;
-$color-succes: #91d18b;
+$color-succes: #3aad6e;
 $color-dark: #1a1c20;
 $color-light: #fff;
-$color-medium-grey: #999;
+$color-grey: #999;
 
 .navbar {
   display: flex;
@@ -29,7 +28,7 @@ $color-medium-grey: #999;
       left: 0;
       top: -0.4rem;
       font-size: 3rem;
-      color: $color-secondary;
+      color: $color-primary;
     }
 
     .app-title {
@@ -49,7 +48,7 @@ $color-medium-grey: #999;
 
     .username {
       font-weight: 300;
-      color: $color-medium-grey;
+      color: $color-grey;
     }
 
     li {
@@ -59,7 +58,7 @@ $color-medium-grey: #999;
       border-bottom: 2px solid $color-light;
       &:not([class="username"]):hover {
         cursor: pointer;
-        border-bottom: 2px solid $color-secondary;
+        border-bottom: 2px solid $color-primary;
       }
       &:last-of-type {
         margin-right: 0;

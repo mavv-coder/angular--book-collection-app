@@ -1,15 +1,24 @@
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-succes: #3aad6e;
+$color-dark: #1a1c20;
+$color-light: #fff;
+$color-grey: #999;
+
 .spinner {
-  border: 1rem solid white;
+  border: 1rem solid $color-background;
   border-radius: 50%;
-  border-top: 1rem solid rgb(74, 109, 131);
+  border-top: 1rem solid $color-primary;
   width: 120px;
   height: 120px;
   margin: 3rem auto;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 1.7s linear infinite; /* Safari */
+  animation: spin 1.7s linear infinite;
 }
 
-/* Safari */
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);

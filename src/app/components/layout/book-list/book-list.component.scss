@@ -1,13 +1,12 @@
-// Variables
-$color-background: #faf9f6;
-$color-primary: #065c6f;
-$color-secondary: #a35d6a;
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
 $color-warn: #eebb4d;
 $color-danger: #ed6663;
-$color-succes: #91d18b;
+$color-succes: #3aad6e;
 $color-dark: #1a1c20;
 $color-light: #fff;
-$color-medium-grey: #999;
+$color-grey: #999;
 
 .card {
   padding: 0.5rem 2rem;
@@ -18,6 +17,7 @@ $color-medium-grey: #999;
 .list-container {
   min-width: max-content;
   margin: 0 auto;
+
   .list-item-container {
     width: 100%;
     padding: 1.5rem 0;
@@ -30,12 +30,12 @@ $color-medium-grey: #999;
     }
 
     .read-icon {
-      color: rgb(58, 173, 110);
+      color: $color-succes;
       margin-right: 1rem;
     }
 
     .not-read-icon {
-      color: #ccc;
+      color: $color-grey;
       margin-right: 1rem;
     }
 
@@ -46,7 +46,7 @@ $color-medium-grey: #999;
       margin-right: 2rem;
       .text-item {
         padding: 0 1rem;
-        border-right: 1px solid #ccc;
+        border-right: 1px solid $color-grey;
         &:last-of-type {
           padding-right: 0;
           border-right: none;
@@ -55,7 +55,7 @@ $color-medium-grey: #999;
     }
     .btn-container {
       padding-left: 2rem;
-      border-left: 1px solid #ccc;
+      border-left: 1px solid $color-grey;
 
       .btn {
         position: relative;
@@ -72,7 +72,7 @@ $color-medium-grey: #999;
         }
 
         &:hover {
-          opacity: 0.5;
+          opacity: 0.7;
           cursor: pointer;
         }
 
@@ -90,10 +90,10 @@ $color-medium-grey: #999;
       }
 
       .edit-btn {
-        background-color: #eebb4d;
+        background-color: #ccc;
       }
       .delete-btn {
-        background-color: #ed6663;
+        background-color: $color-danger;
       }
     }
   }
