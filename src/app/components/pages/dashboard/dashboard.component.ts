@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../../services/book/book.service';
+import { SettingsService } from '../../../services/settings/settings.service';
 import { Book } from '../../../models';
 
 @Component({
@@ -13,9 +14,15 @@ export class DashboardComponent implements OnInit {
   pagesToRead: number = 0;
   showReadPages: boolean = true;
   showPagesToRead: boolean = true;
-  constructor(private bookService: BookService) {}
+
+  constructor(
+    private bookService: BookService,
+    private settingsService: SettingsService
+  ) {}
 
   ngOnInit(): void {
+    this.showReadPages = this.settingsService.getSettings().showReadPages;
+    this.showPagesToRead = this.settingsService.getSettings().showPagesToRead;
     setTimeout(() => {
       this.bookService.getBooks().subscribe((data) => {
         this.books = data;

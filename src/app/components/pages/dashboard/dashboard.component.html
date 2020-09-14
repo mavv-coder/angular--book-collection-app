@@ -3,9 +3,9 @@
     <a class="add-new-btn" routerLink="/book/add"
       >Add new<span class="material-icons add-icon"> add </span></a
     >
-    <div class="pages-container">
-      <p>Read pages: {{ readPages }}</p>
-      <p>Pages to read: {{ pagesToRead }}</p>
+    <div *ngIf="showReadPages || showPagesToRead" class="pages-container">
+      <p *ngIf="showReadPages">Read pages: {{ readPages }}</p>
+      <p *ngIf="showPagesToRead">Pages to read: {{ pagesToRead }}</p>
       <hr class="divider" />
     </div>
   </div>

@@ -1,5 +1,8 @@
 <nav class="navbar">
-  <p class="app-title">Book Collection</p>
+  <div class="title-container">
+    <span class="material-icons book-icon"> import_contacts </span>
+    <p class="app-title">Book Collection</p>
+  </div>
   <ul class="link-list">
     <li *ngIf="isLogged" class="username">Hello, {{ userEmail }}</li>
     <li *ngIf="!isLogged"><a routerLink="/login">Login</a></li>

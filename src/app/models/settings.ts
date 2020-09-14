@@ -1,5 +1,5 @@
 export interface Settings {
   allowRegistration: boolean;
-  ShowPagesToRead: boolean;
+  showPagesToRead: boolean;
   showReadPages: boolean;
 }

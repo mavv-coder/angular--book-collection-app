@@ -11,10 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 2rem;
 
     .add-new-btn {
       position: relative;
       text-decoration: none;
+      margin-bottom: 2rem;
       color: white;
       background-color: rgb(58, 173, 110);
       border-radius: 1rem;
@@ -52,7 +54,7 @@
 
     .divider {
       width: 50%;
-      margin: 2rem 0 2rem auto;
+      margin: 2rem 0 0rem auto;
       border: 1px solid #eee;
     }
   }

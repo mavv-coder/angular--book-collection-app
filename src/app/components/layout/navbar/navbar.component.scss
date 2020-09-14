@@ -9,6 +9,19 @@ $light-color: white;
   padding: 1rem 2rem;
   background-color: $background-color;
 
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 300;
+
+    .book-icon {
+      color: white;
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+  }
+
   .app-title {
     color: $light-color;
     font-size: 2rem;

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { baseRoutes } from 'src/app/app-routes.config';
 import { AuthService } from '../../../services/auth/auth.service';
-import { SnackbarService } from '../../../services/snackbar/snackbar.service';
 import { SettingsService } from '../../../services/settings/settings.service';
 
 @Component({
@@ -16,7 +15,6 @@ export class NavbarComponent implements OnInit {
   showRegisterButton: boolean;
 
   constructor(
-    private snackbarService: SnackbarService,
     private authService: AuthService,
     private settingsService: SettingsService,
     private router: Router
