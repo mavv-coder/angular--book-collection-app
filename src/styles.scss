@@ -1,5 +1,5 @@
 // Variables
-$color-background: #faf9f6;
+$color-background: #eee;
 $color-primary: rgb(68, 130, 223);
 $color-secondary: #a35d6a;
 $color-warn: #eebb4d;
@@ -7,7 +7,7 @@ $color-danger: #ed6663;
 $color-succes: #91d18b;
 $color-dark: #1a1c20;
 $color-light: #fff;
-$color-medium-grey: #999;
+$color-grey: #999;
 
 *,
 *::before,
@@ -26,7 +26,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: $color-background;
+  background-color: #eee;
   color: $color-dark;
 }
 
@@ -42,6 +42,8 @@ a {
   padding: 2rem;
   background-color: $color-light;
   border-radius: 1rem;
+  -webkit-box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
+  box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
 }
 
 .alert-success {

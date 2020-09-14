@@ -33,6 +33,7 @@ $color-medium-grey: #999;
     }
 
     .app-title {
+      font-family: "Merriweather", serif;
       font-weight: 300;
       font-size: 2rem;
       letter-spacing: 0.1rem;
@@ -58,7 +59,7 @@ $color-medium-grey: #999;
       border-bottom: 2px solid $color-light;
       &:not([class="username"]):hover {
         cursor: pointer;
-        border-bottom: 2px solid $color-primary;
+        border-bottom: 2px solid $color-secondary;
       }
       &:last-of-type {
         margin-right: 0;
