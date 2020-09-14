@@ -1,17 +1,34 @@
+$color-background: #eee;
+$color-primary: #a35d6a;
+$color-secondary: #4e89ae;
+$color-warn: #eebb4d;
+$color-danger: #ed6663;
+$color-succes: #3aad6e;
+$color-dark: #1a1c20;
+$color-light: #fff;
+$color-grey: #999;
+
 .content {
   width: max-content;
-  margin: 4rem auto 0 auto;
+  position: absolute;
+  margin: 0 auto;
+  top: 25%;
+  left: 0;
+  right: 0;
 
   .title {
     text-align: center;
+    font-family: "Merriweather", serif;
     font-size: 3rem;
     font-weight: 300;
-    margin-bottom: 2rem;
-    color: rgb(74, 109, 131);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    color: $color-primary;
+    border-bottom: 1px solid #ccc;
   }
 
   .form-field {
-    margin: 2rem 0;
+    margin: 3rem 0;
     display: flex;
     flex-direction: column;
     &:first-of-type {
@@ -24,57 +41,63 @@
       margin-bottom: 0.5rem;
       font-weight: 300;
       letter-spacing: 1px;
-      color: rgb(74, 109, 131);
+      color: $color-dark;
     }
 
     .text-input {
       font-size: 1.6rem;
+      font-weight: 300;
       width: 30rem;
       padding: 0.6rem;
       border: none;
-      border-bottom: 2px solid rgb(74, 109, 131);
+      color: $color-dark;
+      border: 1px solid $color-dark;
       &:focus {
         outline: none;
         border: none;
-        border-bottom: 2px solid rgb(74, 109, 131);
+        border: 1px solid $color-dark;
       }
     }
 
     .invalid-input {
       width: 30rem;
       font-size: 1.6rem;
+      font-weight: 300;
       padding: 0.6rem;
       border: none;
-      border-bottom: 2px solid rgb(219, 80, 65);
+      border: 1px solid $color-danger;
       &:focus {
         outline: none;
         border: none;
-        border-bottom: 2px solid rgb(219, 80, 65);
+        border: 1px solid $color-danger;
       }
     }
   }
 
   .login-btn {
-    font-weight: 300;
     display: inline-block;
-    font-size: 1.6rem;
-    margin: 2rem 25% 0 25%;
     width: 50%;
+    margin: 0rem 25% 1rem 25%;
     padding: 0.8rem 1.2rem;
-    color: white;
-    background-color: rgb(58, 173, 110);
-    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 300;
     border: none;
     outline: none;
+    color: white;
+    background-color: $color-succes;
+    transition: all 0.1s;
     &:hover {
       cursor: pointer;
-      background-color: rgba(58, 173, 110, 0.8);
+      opacity: 0.7;
     }
   }
 
   .error-msg {
     margin-top: 0.5rem;
     font-size: 1.4rem;
+    font-weight: 300;
     color: rgb(219, 80, 65);
   }
 }

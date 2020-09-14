@@ -5,7 +5,9 @@
   </div>
   <ul class="link-list">
     <li *ngIf="isLogged" class="username">Hello, {{ userEmail }}</li>
-    <li *ngIf="!isLogged"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!isLogged && showRegisterButton">
+      <a routerLink="/login">Login</a>
+    </li>
     <li *ngIf="!isLogged && showRegisterButton">
       <a routerLink="/register">Register</a>
     </li>

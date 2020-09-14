@@ -19,14 +19,14 @@ $color-grey: #999;
 
   .title-container {
     position: relative;
-    padding-left: 4rem;
+    padding: 0.7rem 0 0.7rem 4rem;
     user-select: none;
     -moz-user-select: none;
 
     .book-icon {
       position: absolute;
       left: 0;
-      top: -0.4rem;
+      top: 0.4rem;
       font-size: 3rem;
       color: $color-primary;
     }
