@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class AuthService {
   constructor(private afAuth: AngularFireAuth) {}
 
-  login(email: string, password: string) {
+  login(email: string, password: string): Promise<any> {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
         (userData) => resolve(userData),
@@ -19,5 +19,9 @@ export class AuthService {
 
   getAuth() {
     return this.afAuth.authState.pipe(map((auth) => auth));
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
