@@ -9,11 +9,7 @@ $color-light: #fff;
 $color-grey: #999;
 
 .content {
-  position: absolute;
-  margin: 0 auto;
-  top: 25%;
-  left: 0;
-  right: 0;
+  margin: 5rem auto;
   min-width: 30rem;
   width: max-content;
   display: flex;
