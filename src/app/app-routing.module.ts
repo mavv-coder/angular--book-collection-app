@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { baseRoutes } from './app-routes.config';
-import { AuthGuard } from './guards/auth.guard';
+
+import { AuthGuard } from './guards/auth/auth.guard';
+import { RegisterGuard } from './guards/register/register.guard';
 
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { LoginComponent } from './components/pages/login/login.component';
@@ -17,7 +19,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: baseRoutes.login, component: LoginComponent },
-  { path: baseRoutes.register, component: RegisterComponent },
+  {
+    path: baseRoutes.register,
+    component: RegisterComponent,
+    canActivate: [RegisterGuard],
+  },
   {
     path: baseRoutes.bookEdit,
     component: EditBookComponent,

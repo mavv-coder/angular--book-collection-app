@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { baseRoutes } from 'src/app/app-routes.config';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SnackbarService } from '../../../services/snackbar/snackbar.service';
+import { SettingsService } from '../../../services/settings/settings.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +13,12 @@ import { SnackbarService } from '../../../services/snackbar/snackbar.service';
 export class NavbarComponent implements OnInit {
   isLogged: boolean;
   userEmail: string;
+  showRegisterButton: boolean;
 
   constructor(
     private snackbarService: SnackbarService,
     private authService: AuthService,
+    private settingsService: SettingsService,
     private router: Router
   ) {}
 
@@ -29,6 +32,7 @@ export class NavbarComponent implements OnInit {
         this.userEmail = '';
       }
     });
+    this.showRegisterButton = this.settingsService.getSettings().allowRegistration;
   }
 
   onLogoutClick() {
