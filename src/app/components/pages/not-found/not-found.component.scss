@@ -1,1 +1,8 @@
 @import "../../../../sass/variables.scss";
+
+.card {
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 5rem;
+  color: $color-primary;
+}

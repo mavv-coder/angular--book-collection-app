@@ -13,7 +13,7 @@ export class SnackbarService {
     this.flashWorking = true;
     setTimeout(() => {
       this.flashWorking = false;
-    }, 2000);
+    }, 2500);
   }
 
   showFlashMessage(msg: string, cssClass: string): void {
@@ -21,12 +21,8 @@ export class SnackbarService {
       this.setFlashWorking();
       this.flashMessage.show(msg, {
         cssClass: cssClass,
-        timeout: 2000,
+        timeout: 2500,
       });
     }
-  }
-
-  getflashWorking(): boolean {
-    return this.flashWorking;
   }
 }

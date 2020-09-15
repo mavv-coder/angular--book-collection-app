@@ -33,14 +33,16 @@ export class LoginComponent implements OnInit {
       .login(this.email, this.password)
       .then((res) => {
         this.router.navigate([baseRoutes.dashboard]);
+        this.snackbarService.showFlashMessage(
+          'You have been logged successfully!',
+          'alert-success'
+        );
       })
       .catch((err) => {
-        if (!this.snackbarService.getflashWorking()) {
-          this.snackbarService.showFlashMessage(
-            'Invalid email or password',
-            'alert-error'
-          );
-        }
+        this.snackbarService.showFlashMessage(
+          'Invalid email or password',
+          'alert-error'
+        );
       });
   }
 }

@@ -40,17 +40,13 @@ export class EditBookComponent implements OnInit {
     if (valid) {
       value.id = this.id;
       this.bookService.updateBook(value);
-      if (!this.snackbarService.getflashWorking()) {
-        this.snackbarService.showFlashMessage(
-          'The book has been updated successfully!',
-          'alert-success'
-        );
-      }
+      this.snackbarService.showFlashMessage(
+        'The book has been updated successfully!',
+        'alert-success'
+      );
       this.router.navigate([baseRoutes.dashboard]);
     } else {
-      if (!this.snackbarService.getflashWorking()) {
-        this.snackbarService.showFlashMessage('Check the form!', 'alert-error');
-      }
+      this.snackbarService.showFlashMessage('Check the form!', 'alert-error');
     }
   }
 }
