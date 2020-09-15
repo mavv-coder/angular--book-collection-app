@@ -12,7 +12,7 @@ export class SettingsService {
       this.settings = JSON.parse(localStorage.getItem('settings'));
     } else {
       this.settings = {
-        allowRegistration: true,
+        allowRegistration: false,
         showPagesToRead: true,
         showReadPages: true,
       };
