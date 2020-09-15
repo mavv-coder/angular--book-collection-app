@@ -1,12 +1,4 @@
-$color-background: #eee;
-$color-primary: #a35d6a;
-$color-secondary: #4e89ae;
-$color-warn: #eebb4d;
-$color-danger: #ed6663;
-$color-succes: #3aad6e;
-$color-dark: #1a1c20;
-$color-light: #fff;
-$color-grey: #999;
+@import "../../../../sass/variables.scss";
 
 .content {
   width: max-content;
@@ -82,7 +74,7 @@ $color-grey: #999;
     border: none;
     outline: none;
     color: white;
-    background-color: $color-succes;
+    background-color: $color-success;
     transition: all 0.1s;
     &:hover {
       cursor: pointer;
@@ -94,6 +86,6 @@ $color-grey: #999;
     margin-top: 0.5rem;
     font-size: 1.4rem;
     font-weight: 300;
-    color: rgb(219, 80, 65);
+    color: $color-danger;
   }
 }

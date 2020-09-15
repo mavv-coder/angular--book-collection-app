@@ -1,12 +1,4 @@
-$color-background: #eee;
-$color-primary: #a35d6a;
-$color-secondary: #4e89ae;
-$color-warn: #eebb4d;
-$color-danger: #ed6663;
-$color-succes: #3aad6e;
-$color-dark: #1a1c20;
-$color-light: #fff;
-$color-grey: #999;
+@import "../../../../sass/variables.scss";
 
 .content {
   margin: 5rem auto;
@@ -28,7 +20,7 @@ $color-grey: #999;
       text-decoration: none;
       margin-bottom: 2rem;
       color: white;
-      background-color: $color-succes;
+      background-color: $color-success;
       border-radius: 1rem;
       padding: 1rem 3.8rem 1rem 2rem;
       transition: all 0.1s;
@@ -57,7 +49,7 @@ $color-grey: #999;
       &:first-of-type {
         margin-bottom: 10px;
 
-        color: $color-succes;
+        color: $color-success;
       }
     }
 

@@ -1,12 +1,4 @@
-$color-background: #eee;
-$color-primary: #a35d6a;
-$color-secondary: #4e89ae;
-$color-warn: #eebb4d;
-$color-danger: #ed6663;
-$color-succes: #3aad6e;
-$color-dark: #1a1c20;
-$color-light: #fff;
-$color-grey: #999;
+@import "../../../../sass/variables.scss";
 
 .header-details {
   width: 100%;

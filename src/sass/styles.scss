@@ -1,13 +1,4 @@
-// Variables
-$color-background: #eee;
-$color-primary: #a35d6a;
-$color-secondary: #4e89ae;
-$color-warn: #eebb4d;
-$color-danger: #ed6663;
-$color-succes: #3aad6e;
-$color-dark: #1a1c20;
-$color-light: #fff;
-$color-grey: #999;
+@import "variables";
 
 *,
 *::before,
@@ -26,7 +17,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #eee;
+  background-color: $color-background;
   color: $color-dark;
 }
 
@@ -55,7 +46,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: max-content;
-  background-color: rgba(58, 173, 110, 0.9);
+  background-color: $color-success;
   -webkit-box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   color: white;
@@ -72,7 +63,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: max-content;
-  background-color: rgba(219, 80, 65, 0.9);
+  background-color: $color-danger;
   -webkit-box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   color: white;
