@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SnackbarService } from '../../../services/snackbar/snackbar.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { baseRoutes } from '../../../app-routes.config';
+import { SnackbarService } from '../../../services/snackbar/snackbar.service';
 import { BookService } from '../../../services/book/book.service';
+import { baseRoutes } from '../../../app-routes.config';
 import { Book } from 'src/app/models';
 
 @Component({
@@ -33,17 +33,13 @@ export class AddBookComponent implements OnInit {
   onSubmit({ value, valid }: { value: Book; valid: boolean }) {
     if (valid) {
       this.bookService.addBook(value);
-      if (!this.snackbarService.getflashWorking()) {
-        this.snackbarService.showFlashMessage(
-          'The book has been updated successfully!',
-          'alert-success'
-        );
-      }
+      this.snackbarService.showFlashMessage(
+        'The book has been updated successfully!',
+        'alert-success'
+      );
       this.router.navigate([baseRoutes.dashboard]);
     } else {
-      if (!this.snackbarService.getflashWorking()) {
-        this.snackbarService.showFlashMessage('Check the form!', 'alert-error');
-      }
+      this.snackbarService.showFlashMessage('Check the form!', 'alert-error');
     }
   }
 }
