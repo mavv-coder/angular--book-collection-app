@@ -42,16 +42,16 @@ a {
   top: 3.4rem;
   left: 0;
   right: 0;
-  font-weight: 300;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
-  width: max-content;
+  padding: 1.5rem 2rem;
+  font-weight: 300;
+  border-radius: 1rem;
+  color: $color-light;
   background-color: $color-success;
   -webkit-box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
-  color: white;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
 }
 
 .alert-error {
@@ -59,14 +59,14 @@ a {
   top: 3.4rem;
   left: 0;
   right: 0;
-  font-weight: 300;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
-  width: max-content;
+  padding: 1.5rem 2rem;
+  font-weight: 300;
+  border-radius: 1rem;
+  color: $color-light;
   background-color: $color-danger;
   -webkit-box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
   box-shadow: 5px 5px 7px -3px rgba(38, 38, 38, 0.6);
-  color: white;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
 }
